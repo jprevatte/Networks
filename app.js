@@ -49,13 +49,14 @@ function leaderComms() {
         function getUrlVars() {
             var vars = {};
             var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-                vars[key] = value;
+                vars[key.toLowerCase()] = value;
             });
             return vars;
         }
         function getCommKey(parameter, defaultvalue){
             var urlparameter = defaultvalue;
-            if(window.location.href.indexOf(parameter) > -1){
+            var urlLowerCase = window.location.href.toLowerCase();
+            if(urlLowerCase.indexOf(parameter) > -1){
                 urlparameter = getUrlVars()[parameter];
                 }
             return urlparameter;
@@ -67,3 +68,4 @@ function leaderComms() {
         }
     }
 }
+leaderComms();
