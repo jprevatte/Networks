@@ -68,4 +68,7 @@ function leaderComms() {
         }
     }
 }
-leaderComms();
+
+$(document).ready(function(){
+    leaderComms();
+});
