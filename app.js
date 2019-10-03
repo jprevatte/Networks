@@ -1,5 +1,4 @@
-function leaderComms() {
-    var thisURL = window.location.href.toLowerCase();
+function leaderComms(thisURL) {
     if (thisURL.indexOf('/community-home?communitykey=') >= 0) {
         var leaderCommsList = {
             "ed49b695-4867-4213-aacd-abb7f08087f0":"chapt/ca"
@@ -68,7 +67,14 @@ function leaderComms() {
         }
     }
 }
+function refundButton(thisURL){
+    if (thisURL.indexOf('empages/manage-registration') >= 0) {
+        $('.print-registration').after('<div class="do-refund" style="margin-top:15px;"><a href="https://form.asana.com/?hash=c00f54dc0c9d3ea055619309b2c717bb01a536118baada1dec62fda96b433fad&id=1123896884020721" target="_blank" class="btn btn-primary">Request Refund</a></div>');
+    }
+}
 
 $(document).ready(function(){
-    leaderComms();
+    var thisURL = window.location.href.toLowerCase();
+    leaderComms(thisURL);
+    refundButton(thisURL);
 });
