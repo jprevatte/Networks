@@ -25,7 +25,7 @@ function leaderComms(thisURL) {
             ,"a5b911cc-312d-4a7f-9082-758f63999675":"chapt/me"
             ,"81ec9c43-252f-4bf4-bac8-c892978772a2":"chapt/mb"
             ,"b602a452-91d9-4fb5-9da0-1553beb28bf5":"chapt/mt"
-            ,"94508d02-14c8-4cca-a314-65cb9b3411f7":"chapt/nh"
+            ,"94508d02-14c8-4cca-a314-65cb9b3411f7":"chapt/nj"
             ,"b972aab3-4fd7-4b6b-875e-b467df32ce32":"chapt/ny"
             ,"dc18df4b-73a0-4301-be88-706b4e92f618":"chapt/nc"
             ,"7e83fcf5-9116-4fb7-848c-11badf340ee7":"chapt/ok"
