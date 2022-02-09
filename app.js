@@ -1,6 +1,6 @@
 function leaderComms(thisURL) {
     if (thisURL.indexOf('/community-home?communitykey=') >= 0) {
-        var leaderCommsList = {
+        var leaderCommsList = { 
             "ed49b695-4867-4213-aacd-abb7f08087f0":"chapt/ca"
             ,"657870db-9f8d-4ea8-bbe9-de3756389890":"chapt/fl"
             ,"823738f5-a2a3-4967-98ac-1dc72cd4d483":"chapt/mk"
@@ -46,7 +46,7 @@ function leaderComms(thisURL) {
             ,"5264daf8-fb05-4143-b873-86889f166b8f":"chapt/wmpf"
             ,"fbcea787-9670-4abd-9f37-4f563dd8c2f1":"chapt/irsft"
             ,"e0f8ac36-5c1f-40ab-a6eb-8a2e72a9ae14":"chapt/suoad"
-            ,"fdc3ce8c-cffa-461b-8c08-e1cbf8e1203f":"Advocacy/familyteam/Family-Team-Stats-Dashboard"
+            ,"fdc3ce8c-cffa-461b-8c08-e1cbf8e1203f":"Advocacy"
         }
         function getUrlVars() {
             var vars = {};
@@ -64,8 +64,13 @@ function leaderComms(thisURL) {
             return urlparameter;
         }
         var currCommKey = getCommKey('communitykey','nutNhoney').toLowerCase();
-        if (leaderCommsList[currCommKey].length) {
+        if (leaderCommsList[currCommKey].length) { 
             var baseDashboardUrl = 'https://www.aamft.org/AAMFT_Networks/Networks_Dashboard.aspx?groupid=';
+
+            if (leaderCommsList[currentCommKey]=='Advocacy'){
+                baseDashboardUrl = 'https://aamft.org/Advocacy/familyteam/Family-Team-Stats-Dashboard.aspx?groupid=';
+            }
+            
             $('.section1 .nested-community .popover-container').after('<a href="' + baseDashboardUrl + leaderCommsList[currCommKey] +'" class="btn btn-primary pull-right" style="margin-bottom: 10px;">Network Dashboard</a>');
         }
     }
