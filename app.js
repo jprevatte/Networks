@@ -68,7 +68,7 @@ function leaderComms(thisURL) {
             var baseDashboardUrl = 'https://www.aamft.org/AAMFT_Networks/Networks_Dashboard.aspx?groupid=';
 
             if (leaderCommsList[currCommKey]=='Advocacy'){
-                baseDashboardUrl = 'https://aamft.org/Advocacy/familyteam/Family-Team-Stats-Dashboard.aspx?groupid=';
+                baseDashboardUrl = 'https://www.aamft.org/Advocacy/Family-Team-Dashboard.aspx?groupid=';
             }
             
             $('.section1 .nested-community .popover-container').after('<a href="' + baseDashboardUrl + leaderCommsList[currCommKey] +'" class="btn btn-primary pull-right" style="margin-bottom: 10px;">Network Dashboard</a>');
