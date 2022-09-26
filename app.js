@@ -66,12 +66,13 @@ function leaderComms(thisURL) {
         var currCommKey = getCommKey('communitykey','nutNhoney').toLowerCase();
         if (leaderCommsList[currCommKey].length) { 
             var baseDashboardUrl = 'https://www.aamft.org/AAMFT_Networks/Networks_Dashboard.aspx?groupid=';
+            var stateID = "&stateId=" + leaderCommsList[currCommKey].slice(leaderCommsList[currCommKey].indexOf("/")+1);
 
             if (leaderCommsList[currCommKey]=='Advocacy'){
                 baseDashboardUrl = 'https://www.aamft.org/Advocacy/Family-Team-Dashboard.aspx?groupid=';
             }
             
-            $('.section1 .nested-community .popover-container').after('<a href="' + baseDashboardUrl + leaderCommsList[currCommKey] +'" class="btn btn-primary pull-right" style="margin-bottom: 10px;">Network Dashboard</a>');
+            $('.section1 .nested-community .popover-container').after('<a href="' + baseDashboardUrl + leaderCommsList[currCommKey] +stateID+'" class="btn btn-primary pull-right" style="margin-bottom: 10px;">Network Dashboard</a>');
         }
     }
 }
