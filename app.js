@@ -46,6 +46,7 @@ function leaderComms(thisURL) {
             ,"5264daf8-fb05-4143-b873-86889f166b8f":"chapt/wmpf"
             ,"fbcea787-9670-4abd-9f37-4f563dd8c2f1":"chapt/irsft"
             ,"e0f8ac36-5c1f-40ab-a6eb-8a2e72a9ae14":"chapt/suoad"
+            ,"fdc3ce8c-cffa-461b-8c08-e1cbf8e1203f":"Advocacy"
         }
         function getUrlVars() {
             var vars = {};
